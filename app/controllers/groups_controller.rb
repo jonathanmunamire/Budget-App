@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   def index
     @categories = Group.all
+    @user = current_user.name
   end
 
   def show
