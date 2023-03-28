@@ -6,6 +6,9 @@ ruby '3.2.1'
 # Rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Use the devise gem as the session and account manager for the application
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
