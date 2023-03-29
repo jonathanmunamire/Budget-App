@@ -1,2 +1,41 @@
-<%= link_to "Log out", destroy_user_session_path, method: :delete %>
-<p><%= @user %></p>
+<section class="categories">
+  <div class="nav">
+  <p class="back-home"></p>
+    <h5>categories</h5>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+
+  </div>
+
+  <p style="color: green", class="notice"><%= notice %></p>
+
+  <ul class="">
+    <% @groups.each do |group| %>
+      <li class="">
+        <%= link_to group_path(group), class:"" do %>
+            <div class="group-item">
+                <div class="img-item">
+                    <img src="<%= group.icon %>" alt="<%= group.name %>" >
+                </div>
+                <div class="details">
+                    <div class="inner-details">
+                        <h4 class="smallest-headingg">
+                            <%= group.name %>
+                        </h4>
+                        <p>
+                            <%= group.created_at.strftime('%d %b %y') %>
+                        </p>
+                    </div>
+                    <div class="outer-details">
+                            <p>$<%= group.payments.sum(:amount)%>.00</p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+    <%= link_to new_group_path, class: ""  do %> 
+      <p class="add">Add Category</p>
+    <% end %>
+
+</section>

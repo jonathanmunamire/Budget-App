@@ -1,0 +1,32 @@
+<section class="">
+  <div class="nav">
+    <%= link_to group_path(@group), class:"" do %>
+      <
+    <% end %>
+    <h5>Add Payment</h5>
+  </div>
+
+  <%= form_with(model: [@group, @payment], url: group_payments_path(@group)) do |form| %>
+
+    <div class="field">
+      <%= form.text_field :name, required: true, placeholder: "Expense name"  %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :amount, required: true, placeholder: "Amount" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :categories %>
+      <%= form.collection_select(:group_ids, current_user.groups, :id, :name, { selected: @group.id }, { multiple: true }) %>
+      </div>
+
+    <div class="actions">
+      <%= form.submit "Save" %>
+    </div>
+  <% end %>
+
+  <br>
+
+  <%= link_to "", group_path(@group), class: 'back' %>
+</section>

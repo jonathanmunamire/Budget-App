@@ -1,0 +1,61 @@
+<section class="single-category">
+<div class="nav">
+  <%= link_to groups_path, class:"" do %>
+    <
+  <% end %>
+  <h5> Category</h5>
+  <%= button_to 'Delete Category', @group, method: :delete %> </td>
+</div>
+
+<div class="">
+                <div class="">
+                    <img src="<%= @group.icon %>" alt="<%= @group.name %>" >
+                </div>
+                <div class="">
+                    <div class="">
+                        <h4 class="">
+                            <%= @group.name %>
+                        </h4>
+                        <p>
+                            <%= @group.created_at.strftime('%d %b %y') %>
+                        </p>
+                    </div>
+                    <div class="outer-details">
+                        <p>Total amount: $<%= @group.payments.sum(:amount) %></p>
+                    </div>
+                </div>
+</div>
+
+<%= link_to "", groups_path, class: 'back' %>
+
+
+<div class="expenses-list">
+<% if @group.payments.any? %>
+<h4>Payments</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Amount</th>
+<th>Date</th>
+</tr>
+</thead>
+        <tbody>
+        <% @group.payments.order(created_at: :desc).each do |payment| %>
+          <tr>
+          <td><%= payment.name %></td>
+          <td class="amount">$<%= payment.amount %></td>
+          <td><%= payment.created_at.strftime('%B %d, %Y') %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+  
+  <%= link_to new_group_payment_path(@group), class: "new-expense" do %>
+    <p class="add">Add payment</p>
+  <% end %>
+
+  </section>
+  
