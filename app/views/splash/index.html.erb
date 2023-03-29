@@ -1,10 +1,15 @@
-<section class="">
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'splash' %>
+</head>
+<body class="splash_screen_body">
+    <section class="splash_screen_section">
+        <h2 class="splash_screen_title">Azur Pay</h2>
 
-<h2 class="">Azur Pay</h2>
+        <div class="splash_screen_links">
+            <%= link_to "Log in", new_user_session_path, class: "splash_screen_login" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "splash_screen_signup" %>
+        </div>
+    </section>
+</body>
 
-<div>
-<%= link_to "Log in", new_user_session_path, class: "log-in" %>
-<%= link_to "Sign up", new_user_registration_path, class: "sign-up" %>
-</div>
-
-</section>
