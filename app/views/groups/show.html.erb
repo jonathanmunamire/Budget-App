@@ -3,9 +3,9 @@
   <%= link_to groups_path, class:"" do %>
     <
   <% end %>
-  <h5> Category</h5>
-  <%= button_to 'Delete Category', @group, method: :delete %> </td>
-</div>
+  <h5>Category</h5>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  </div>
 
 <div class="">
                 <div class="">
@@ -23,6 +23,7 @@
                     <div class="outer-details">
                         <p>Total amount: $<%= @group.payments.sum(:amount) %></p>
                     </div>
+                    <%= button_to 'Delete Category', @group, method: :delete %> </td>
                 </div>
 </div>
 
