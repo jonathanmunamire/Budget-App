@@ -105,4 +105,19 @@
 .password-reset-link {
     color: #9b9b9b;
     text-decoration: none;
+    padding-top: 1rem;
+}
+
+.reset_password_button {
+    background-color: #337ab7;
+    color: white;
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
