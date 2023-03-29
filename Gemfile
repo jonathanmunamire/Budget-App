@@ -73,7 +73,6 @@ group :development, :test do
 
   # Use the FactoryBot library in Rails application
   gem 'factory_bot_rails'
-
 end
 
 group :development do
