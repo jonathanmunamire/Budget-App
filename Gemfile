@@ -12,6 +12,8 @@ gem 'devise'
 # Use CanCan to implement authorization helpers in a Rails application
 gem 'cancancan', '~> 1.9'
 
+# Use Font Awesome for to add icons in Rails application
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 

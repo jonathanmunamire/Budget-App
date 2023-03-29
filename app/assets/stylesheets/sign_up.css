@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('proximanova-bold.woff2') format('woff2'),
+         url('proximanova-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.signup_screen_body {
+    background-color: rgb(243, 243, 243);
+    padding: 0;
+    margin: 0;
+}
+
+.signup_screen_form {
+    width: 100%;
+}
+
+.signup_screen_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #3778c2, #3778c2, #2c64a5, #275a94);
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.back-icon {
+    width: 20vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+.signup_screen_title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.signup_screen_submit_button {
+    width: 20vw;
+    text-align: end;
+}
+
+.signup_screen_submit_button input[type="submit"] {
+    border: none;
+    background-color: transparent;
+    align-self: flex-end;
+    color: #fff;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.signup_screen_fields {
+    background-color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 2px rgb(238, 238, 238) solid;
+    border-bottom: 2px rgb(238, 238, 238) solid;
+}
+
+.signup_field input[type="email"],
+.signup_field input[type="password"] {
+  height: 7vh;
+  width: 100%;
+  border: none;
+  border-top: 2px rgb(238, 238, 238) solid;
+  outline: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.signup_field input[type="text"]{
+  height: 7vh;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.signup_field input::placeholder {
+    color: #c2c2c2;
+    font-family: 'Proxima Nova Bold', sans-serif;
+}
