@@ -1,0 +1,17 @@
+<div class="create-container">
+  <div class="nav">
+    <%= link_to groups_path, class:"" do %>
+      <
+    <% end %>
+    <h5> Create New Category</h5>
+  </div>
+
+  <%= form_with model: @group, url: groups_path, method: :post do |f|%>
+
+  <%= f.text_field :name, placeholder: 'Name' %>
+  <br>
+  <%= f.text_field :icon, placeholder: 'Icon URL' %>
+  <br>
+  <%= f.submit 'Create Category'%>  
+  <%end%>
+</div>
