@@ -18,10 +18,12 @@
     flex-direction: column;
     align-items: center;
     position: fixed;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
+    width: 100vw;
+    left: 0%;
+    top: 0%;
+    transform: translateY(-55%);
     animation: slide-in 1s forwards;
+    text-align: center;
 }
 
 .splash_screen_title {
@@ -40,6 +42,7 @@
     opacity: 0;
     pointer-events: none;
     animation: fade-in 1.5s 1s forwards;
+    align-items: center;
 }
 
 .splash_screen_login {
@@ -48,8 +51,8 @@
     align-items: center;
     text-align: center;
     background-color: #3778c2;
-    width: 80vw;
     height: 7vh;
+    width: 80vw;
     color: #fff;
     text-decoration: none;
     border-radius: 0.2rem;
@@ -64,8 +67,8 @@
     align-items: center;
     text-align: center;
     background-color: rgb(243, 243, 243);
-    width: 80vw;
     height: 7vh;
+    width: 80vw;
     color: #818181;
     text-decoration: none;
     border-radius: 0.2rem;
@@ -91,6 +94,36 @@
     100% {
       opacity: 1;
       pointer-events: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .splash_screen_login {
+        width: 70vw;
+    }
+    
+    .splash_screen_signup {
+        width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .splash_screen_login {
+        width: 50vw;
+    }
+    
+    .splash_screen_signup {
+        width: 50vw;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .splash_screen_login {
+        width: 40vw;
+    }
+    
+    .splash_screen_signup {
+        width: 40vw;
     }
 }
   
