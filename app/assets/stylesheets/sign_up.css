@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src:
+    url('proximanova-bold.woff2') format('woff2'),
+    url('proximanova-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.signup_screen_body {
+  background-color: rgb(243, 243, 243);
+  padding: 0;
+  margin: 0;
+}
+
+.signup_screen_form {
+  width: 100%;
+}
+
+.signup_screen_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #3778c2, #3778c2, #2c64a5, #275a94);
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.back-icon {
+  width: 20vw;
+  color: #fff;
+  text-decoration: none;
+}
+
+.signup_screen_title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.signup_screen_submit_button {
+  width: 20vw;
+  text-align: end;
+}
+
+.signup_screen_submit_button input[type="submit"] {
+  border: none;
+  background-color: transparent;
+  align-self: flex-end;
+  color: #fff;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
+.signup_screen_fields {
+  background-color: #fff;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-top: 2px rgb(238, 238, 238) solid;
+  border-bottom: 2px rgb(238, 238, 238) solid;
+}
+
+.url_placeholder input[type="number"],
+.url_placeholder input[type="text"],
+.signup_field input[type="email"],
+.signup_field input[type="password"] {
+  height: 7vh;
+  width: 100%;
+  border: none;
+  border-top: 2px rgb(238, 238, 238) solid;
+  outline: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.signup_field input[type="text"] {
+  height: 7vh;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.url_placeholder input::placeholder,
+.signup_field input::placeholder {
+  color: #c2c2c2;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.logout_button {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.groups_container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+}
+
+.single_group {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  list-style: none;
+  border-radius: 0.1rem;
+  box-shadow: 2px 2px 7px rgb(221, 221, 221);
+}
+
+.single_group_link {
+  text-decoration: none;
+}
+
+.group-items {
+  display: flex;
+}
+
+.img-item img {
+  width: 70px;
+  flex: 1;
+}
+
+.group_details {
+  display: flex;
+  flex: 7;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  gap: 0.5rem;
+}
+
+.inner-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px #fafafa solid;
+  padding-bottom: 1rem;
+}
+
+.details-heading {
+  color: #9b9b9b;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.details-sum {
+  color: #434b54;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.outer-details {
+  color: #b8b8b8;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.7rem;
+}
+
+.add-category-button {
+  margin-top: auto;
+  height: 12vh;
+  padding: 1rem;
+  background-color: #5fb523;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.add-category-text {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid #fff;
+  border-radius: 0.2rem;
+}
+
+.hidden_button {
+  visibility: hidden;
+}
+
+.img-item-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px rgb(235, 234, 234) solid;
+}
+
+.img-item-container-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.details-heading-details {
+  color: #434b54;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.payments_details_total {
+  display: flex;
+  justify-content: space-between;
+  color: #434b54;
+}
+
+.details_total_payment {
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.transaction-container {
+  border-top: 2px rgb(235, 234, 234) solid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.transaction-details {
+  color: #434b54;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.payment_name {
+  color: #3778c2;
+}
+
+.transaction-amount {
+  color: #434b54;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.transaction-date {
+  color: #b8b8b8;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.9rem;
+}
+
+.delete-btn-details {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete-btn-details:hover {
+  background-color: red;
+  color: #fff;
+  border: none;
+}
+
+.select_placeholder {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  border: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 2px rgb(238, 238, 238) solid;
+  outline: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.select_placeholder label {
+  color: #c2c2c2;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 0.9rem;
+}
+
+.url_placeholder select {
+  width: 70%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 0.9rem;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  overflow: hidden;
+}
+
+.url_placeholder:focus {
+  outline: none;
+  border-color: #06c;
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}

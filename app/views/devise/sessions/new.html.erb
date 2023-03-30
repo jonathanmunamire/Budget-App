@@ -1,26 +1,42 @@
-<h2>Log in</h2>
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'log_in' %>
+  <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+</head>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<body class="login_screen_body">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "login_screen_form" }) do |f| %>
+  <div class="login_screen_nav">
+    <%= link_to root_path, class:"back-icon" do %>
+      <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+    <% end %>
+    <h2 class="login_screen_title">Login</h2>
+    <div class="login_screen_submit_button">
+      <%= f.submit "Log in" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+  <div class="login_screen_fields">
+    <div class="login_field">
+      <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+    </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="login_field">
+      <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+    <div class="remenber_field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
+  
+  <% end %>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<p><%= link_to "Forgot your password?", new_password_path(resource_name), class: "password-reset-link" %></p>
+
+</body>
+
+

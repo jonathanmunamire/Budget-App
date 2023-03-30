@@ -7,7 +7,7 @@ RSpec.feature 'Log in index page', type: :feature do
   end
 
   scenario 'Displays login details' do
-    expect(page).to have_content('Log in')
+    expect(page).to have_content('Login')
     expect(page).to have_content('Forgot your password?')
     expect(page).to have_css('input#user_email', count: 1)
   end

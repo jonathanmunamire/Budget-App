@@ -1,62 +1,57 @@
-<section class="single-category">
-<div class="nav">
-  <%= link_to groups_path, class:"" do %>
-    <
-  <% end %>
-  <h5>Category</h5>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'sign_up' %>
+  <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="signup_screen_body groups_body">
+  <div class="signup_screen_nav">
+    <%= link_to groups_path, class:"back-icon" do %>
+      <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+    <% end %>    
+    <h5 class="signup_screen_title">Details</h5>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"signup_screen_submit_button logout_button hidden_button" %>
   </div>
 
-<div class="">
-                <div class="">
-                    <img src="<%= @group.icon %>" alt="<%= @group.name %>" >
-                </div>
-                <div class="">
-                    <div class="">
-                        <h4 class="">
-                            <%= @group.name %>
-                        </h4>
-                        <p>
-                            <%= @group.created_at.strftime('%d %b %y') %>
-                        </p>
-                    </div>
-                    <div class="outer-details">
-                        <p>Total amount: $<%= @group.payments.sum(:amount) %></p>
-                    </div>
-                    <%= button_to 'Delete Category', @group, method: :delete %> </td>
-                </div>
-</div>
+  <div class="groups_container">
+    <div class="single_group">
+      <div class="img-item-container">
+        <div class="img-item-container-container">
+          <div class="img-item">
+            <img src="<%= @group.icon %>" alt="<%= @group.name %>" >
+          </div>
+          <h4 class="details-heading-details">
+            <%= @group.name %>
+          </h4>
+        </div>
+        <%= button_to 'Delete Category', @group, method: :delete, class: 'delete-btn-details' %>
+      </div>
+      
+      <div class="payments_details_total">
+        <p class="details_total_payment">total payment</p>
+        <p class="details-sum">$<%= @group.payments.sum(:amount) %></p>
+      </div>
 
-<%= link_to "", groups_path, class: 'back' %>
-
-
-<div class="expenses-list">
-<% if @group.payments.any? %>
-<h4>Payments</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Amount</th>
-<th>Date</th>
-</tr>
-</thead>
-        <tbody>
+      <% if @group.payments.any? %>
         <% @group.payments.order(created_at: :desc).each do |payment| %>
-          <tr>
-          <td><%= payment.name %></td>
-          <td class="amount">$<%= payment.amount %></td>
-          <td><%= payment.created_at.strftime('%B %d, %Y') %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+          <div class="transaction-container">
+            <p class="transaction-details">Transaction N&deg;<%= payment.id %>: <span class="payment_name"><%= payment.name %></span></p>
+            <div class="transaction-amount">
+              $<%= payment.amount %>
+            </div>
+            <div class="transaction-date">
+              <i class="fa-solid fa-calendar-days"></i>
+              <%= payment.created_at.strftime('%d %b %y at %I:%M %p').gsub(/PM/, 'pm') %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <%= link_to new_group_payment_path(@group), class: "add-category-button" do %>
+      <p class="add-category-text">Add payment</p>
     <% end %>
   </div>
-  
-  <%= link_to new_group_payment_path(@group), class: "new-expense" do %>
-    <p class="add">Add payment</p>
-  <% end %>
+</body>
 
-  </section>
   
