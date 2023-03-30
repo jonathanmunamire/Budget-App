@@ -57,12 +57,15 @@
 
 .signup_screen_fields {
     background-color: #fff;
+    margin-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     border-top: 2px rgb(238, 238, 238) solid;
     border-bottom: 2px rgb(238, 238, 238) solid;
 }
 
+.url_placeholder input[type="number"],
+.url_placeholder input[type="text"],
 .signup_field input[type="email"],
 .signup_field input[type="password"] {
   height: 7vh;
@@ -81,6 +84,7 @@
   font-family: 'Proxima Nova Bold', sans-serif;
 }
 
+.url_placeholder input::placeholder,
 .signup_field input::placeholder {
     color: #c2c2c2;
     font-family: 'Proxima Nova Bold', sans-serif;
@@ -260,3 +264,37 @@
   color: #fff;
   border: none;
 }
+
+.select_placeholder {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 2px rgb(238, 238, 238) solid;
+    outline: none;
+    font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.select_placeholder label{
+    color: #c2c2c2;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    font-size: 0.9rem;
+}
+
+.url_placeholder select {
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 0.9rem;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    overflow: hidden;
+}
+
+.url_placeholder:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+  }
