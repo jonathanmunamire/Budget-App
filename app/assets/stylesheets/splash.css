@@ -1,129 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 @font-face {
-    font-family: 'Proxima Nova Bold';
-    src: url('proximanova-bold.woff2') format('woff2'),
-         url('proximanova-bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Proxima Nova Bold';
+  src:
+    url('proximanova-bold.woff2') format('woff2'),
+    url('proximanova-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 .splash_screen_body {
-    background-color: rgb(243, 243, 243);
+  background-color: rgb(243, 243, 243);
 }
 
 .splash_screen_section {
-    display: flex;
-    height: 90vh;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    width: 100vw;
-    left: 0%;
-    top: 0%;
-    transform: translateY(-55%);
-    animation: slide-in 1s forwards;
-    text-align: center;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  left: 0%;
+  top: 0%;
+  transform: translateY(-55%);
+  animation: slide-in 1s forwards;
+  text-align: center;
 }
 
 .splash_screen_title {
-    color: #434b54;
-    margin-top: auto;
-    font-family: 'Kaushan Script', cursive;
-    font-size: 2.5rem;
+  color: #434b54;
+  margin-top: auto;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 2.5rem;
 }
 
 .splash_screen_links {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-family: 'Proxima Nova Bold', sans-serif;
-    opacity: 0;
-    pointer-events: none;
-    animation: fade-in 1.5s 1s forwards;
-    align-items: center;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  animation: fade-in 1.5s 1s forwards;
+  align-items: center;
 }
 
 .splash_screen_login {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #3778c2;
-    height: 7vh;
-    width: 80vw;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0.2rem;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #3778c2;
+  height: 7vh;
+  width: 80vw;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .splash_screen_signup {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(243, 243, 243);
-    height: 7vh;
-    width: 80vw;
-    color: #818181;
-    text-decoration: none;
-    border-radius: 0.2rem;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+  height: 7vh;
+  width: 80vw;
+  color: #818181;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 @keyframes slide-in {
-    0% {
-      top: 40%;
-    }
-    100% {
-      top: 50%;
-    }
+  0% {
+    top: 40%;
+  }
+
+  100% {
+    top: 50%;
+  }
 }
 
 @keyframes fade-in {
-    0% {
-      opacity: 0;
-      pointer-events: none;
-    }
-    100% {
-      opacity: 1;
-      pointer-events: auto;
-    }
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .splash_screen_login {
-        width: 70vw;
-    }
-    
-    .splash_screen_signup {
-        width: 70vw;
-    }
+  .splash_screen_login {
+    width: 70vw;
+  }
+
+  .splash_screen_signup {
+    width: 70vw;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-    .splash_screen_login {
-        width: 50vw;
-    }
-    
-    .splash_screen_signup {
-        width: 50vw;
-    }
+  .splash_screen_login {
+    width: 50vw;
+  }
+
+  .splash_screen_signup {
+    width: 50vw;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
-    .splash_screen_login {
-        width: 40vw;
-    }
-    
-    .splash_screen_signup {
-        width: 40vw;
-    }
+  .splash_screen_login {
+    width: 40vw;
+  }
+
+  .splash_screen_signup {
+    width: 40vw;
+  }
 }
-  
