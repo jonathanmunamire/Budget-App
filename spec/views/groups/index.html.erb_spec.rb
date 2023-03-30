@@ -10,7 +10,7 @@ RSpec.feature 'Group/Category index page', type: :feature do
   end
 
   scenario 'Displays homepage details' do
-    expect(page).to have_content('categories')
+    expect(page).to have_content('Transactions')
     expect(page).to have_content('Add Category')
     expect(page).to have_css('li.group-category', count: 0)
   end
