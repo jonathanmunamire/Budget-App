@@ -16,7 +16,7 @@ class PaymentsController < ApplicationController
     respond_to do |format|
       if @payment.save
         format.html do
-          redirect_to group_path(id: params[:payment][:group_ids].last), notice: 'Expense was successfully created.'
+          redirect_to group_path(id: params[:payment][:group_ids].last), notice: 'Payment Succesful'
         end
         format.json { render :show, status: :created, location: @payment }
       else
