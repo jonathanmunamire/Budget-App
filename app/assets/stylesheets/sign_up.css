@@ -166,7 +166,7 @@
 
 .add-category-button {
   margin-top: auto;
-  height: 12vh;
+  min-height: 12vh;
   padding: 1rem;
   background-color: #5fb523;
   text-decoration: none;

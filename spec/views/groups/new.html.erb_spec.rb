@@ -10,6 +10,6 @@ RSpec.feature 'Group/Category new page', type: :feature do
 
   scenario 'Displays new category page' do
     expect(page).to have_current_path(new_group_path)
-    expect(page).to have_content('Create New Category')
+    expect(page).to have_content('Create Category')
   end
 end
