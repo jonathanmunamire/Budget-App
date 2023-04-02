@@ -1,0 +1,33 @@
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'log_in' %>
+  <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="login_screen_body">
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "login_screen_form" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="login_screen_nav">
+    <%= link_to new_user_session_path, class:"back-icon" do %>
+      <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+    <% end %>
+    <h2 class="login_screen_title">Forgot your password?</h2>
+    <div class="login_screen_submit_button"></div>
+  </div>
+
+  <div class="login_screen_fields">
+    <div class="login_field">
+      <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Send me reset password instructions", class:"reset_password_button" %>
+    </div>
+  </div>
+  
+<% end %>
+
+<%= link_to "Log in", new_user_session_path, class: "password-reset-link" %>
+<%= link_to "Sign up", new_user_registration_path, class: "password-reset-link" %>
+</body>

@@ -1,0 +1,41 @@
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'sign_up' %>
+  <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+</head>
+<body class="signup_screen_body">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "signup_screen_form" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="signup_screen_nav">
+    <%= link_to root_path, class:"back-icon" do %>
+      <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+    <% end %>
+    <h2 class="signup_screen_title">Register</h2>
+    <div class="signup_screen_submit_button">
+      <%= f.submit "Next" %>
+    </div>
+  </div>
+
+  <div class="signup_screen_fields">
+    <div class="signup_field">
+      <%= f.text_field :name, placeholder: "Full name" %>
+    </div>
+
+    <div class="signup_field">
+      <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="signup_field">
+      <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password" %>
+    </div>
+
+    <div class="signup_field">
+      <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", autocomplete: "new-password" %>
+    </div>
+  <div>
+
+  
+<% end %>
+</body>

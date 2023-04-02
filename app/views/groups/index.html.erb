@@ -1,0 +1,46 @@
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'sign_up' %>
+  <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="signup_screen_body groups_body">
+<section class="categories">
+  <div class="signup_screen_nav">
+    <p class="signup_screen_title back-icon"><%= current_user.name.split.map{ |name| name[0].capitalize }.join %></p>
+    <h5 class="signup_screen_title">Transactions</h5>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"signup_screen_submit_button logout_button" %>
+  </div>
+
+  <p style="color: green", class="notice"><%= notice %></p>
+
+  <ul class="groups_container">
+    <% @groups.each do |group| %>
+      <li class="single_group">
+        <%= link_to group_path(group), class:"single_group_link" do %>
+            <div class="group-items">
+                <div class="img-item">
+                    <img src="<%= group.icon %>" alt="<%= group.name %>" >
+                </div>
+                <div class="group_details">
+                    <div class="inner-details">
+                        <h4 class="details-heading">
+                            <%= group.name %>
+                        </h4>
+                        <p class="details-sum">$<%= group.payments.sum(:amount)%>.00</p>
+                    </div>
+                    <div class="outer-details">
+                      <%= group.created_at.strftime('%d %b %y') %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+      </li>
+    <% end %>
+
+    <%= link_to new_group_path, class: "add-category-button"  do %> 
+      <p class="add-category-text">Add Category</p>
+    <% end %>
+  </ul>
+</section>
+</body>

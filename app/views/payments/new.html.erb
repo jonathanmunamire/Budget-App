@@ -1,0 +1,33 @@
+<head>
+  <title>Budget App</title>
+  <%= stylesheet_link_tag 'sign_up' %>
+  <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+</head>
+<body class="signup_screen_body">
+
+  <%= form_with(model: [@group, @payment], url: group_payments_path(@group)) do |form| %>
+    <div class="signup_screen_nav">
+      <%= link_to group_path(@group), class:"back-icon" do %>
+        <i class="fa-sharp fa-solid fa-arrow-left-long"></i>
+      <% end %>
+      <h2 class="signup_screen_title">Add Payment</h2>
+      <div class="signup_screen_submit_button">
+        <%= form.submit "Pay" %>
+      </div>
+    </div>
+    <div class="signup_screen_fields">
+      <div class="signup_field">
+        <%= form.text_field :name, required: true, placeholder: "Payment name"  %>
+      </div>
+
+      <div class="url_placeholder">
+        <%= form.number_field :amount, required: true, placeholder: "Amount" %>
+      </div>
+
+      <div class="url_placeholder select_placeholder">
+        <%= form.label :categories %>
+        <%= form.collection_select(:group_ids, current_user.groups, :id, :name, { selected: @group.id }, { multiple: true }) %>
+      </div>
+    </div>
+  <% end %>
+</body>
