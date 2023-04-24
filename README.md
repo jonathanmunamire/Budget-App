@@ -54,10 +54,6 @@ The Recipe App was built with:
 - **Authentication**
 - **Table Logic**
 
-### Presentation Video
-
-[Loom Presentation](https://www.loom.com/share/c28cabde4b2445ee965474ed25b3c491)
-
 ### Live Demo <a name="live-demo"></a>
 
 [Live Demo](https://budget-app-ti47.onrender.com/)
